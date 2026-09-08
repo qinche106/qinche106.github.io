@@ -44,6 +44,11 @@ jobs:
           GITHUB_PAGES: 'true'
           NEXT_PUBLIC_BASE_PATH: /efficient-intelligence-group
 
+      - name: Normalize static asset paths
+        run: |
+          mv dist/client/efficient-intelligence-group/_next dist/client/_next
+          rmdir dist/client/efficient-intelligence-group
+
       - name: Upload Pages artifact
         uses: actions/upload-pages-artifact@v4
         with:
