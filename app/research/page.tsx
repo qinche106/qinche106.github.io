@@ -1,5 +1,4 @@
 import type { Metadata } from 'next';
-import { ArrowDown, ArrowRight } from 'lucide-react';
 import { PageIntro } from '@/components/page-intro';
 import { internalPath } from '@/lib/paths';
 import { researchAreas } from '@/lib/site-data';
@@ -8,7 +7,7 @@ export const dynamic = 'force-static';
 
 export const metadata: Metadata = {
   title: 'Research · Efficient Intelligence Group',
-  description: 'Explore our research in embedded AI, neuromorphic computing, bio-signal processing, and intelligent perception.',
+  description: 'Research in efficient AI, neuromorphic computing, bio-signal processing, and intelligent perception.',
 };
 
 export default function ResearchPage() {
@@ -16,36 +15,25 @@ export default function ResearchPage() {
     <main>
       <PageIntro
         eyebrow="Research"
-        title={<>A full-stack view of<br /><em>efficient intelligence.</em></>}
-        intro="We work across algorithms, architectures, circuits, and systems. Constraints are not an afterthought—they shape the intelligence we design."
+        title="Research"
+        intro="We study efficient intelligence across algorithms, architectures, circuits, and embedded systems."
       />
-
-      <nav className="research-index section-shell" aria-label="Research areas">
-        {researchAreas.map((area) => (
-          <a href={`#${area.slug}`} key={area.slug}>
-            <span>{area.number}</span>{area.title}<ArrowDown size={15} aria-hidden="true" />
-          </a>
-        ))}
-      </nav>
 
       <div className="research-detail-list section-shell">
         {researchAreas.map((area, index) => (
           <section className="research-detail" id={area.slug} key={area.slug}>
-            <div className="research-detail-number">{area.number}</div>
-            <div className="research-detail-heading">
-              <p>{area.label}</p>
+            <div>
+              <p className="research-label">{area.label}</p>
               <h2>{area.title}</h2>
-              <p className="research-detail-summary">{area.summary}</p>
-            </div>
-            <div className="research-detail-body">
+              <p className="research-summary">{area.summary}</p>
               <p>{area.body}</p>
-              <div className="method-list">
-                {area.methods.map((method) => <span key={method}>{method}</span>)}
-              </div>
-              <p className="application"><strong>Where it matters</strong>{area.applications}</p>
+              <ul className="method-list">
+                {area.methods.map((method) => <li key={method}>{method}</li>)}
+              </ul>
+              <p className="application"><strong>Applications:</strong> {area.applications}</p>
             </div>
             {index === 0 && (
-              <figure className="research-detail-image">
+              <figure>
                 <img src={internalPath('/images/deltakws-chip.png')} alt="Keyword spotting chip and measurement platform" />
                 <figcaption>From architecture to measured silicon.</figcaption>
               </figure>
@@ -54,11 +42,12 @@ export default function ResearchPage() {
         ))}
       </div>
 
-      <section className="cross-layer section-shell">
-        <p className="eyebrow eyebrow-light"><span /> Our approach</p>
-        <div>
-          <h2>Algorithms <span>→</span> architectures <span>→</span> systems <span>→</span> impact.</h2>
-          <a className="button button-light" href={internalPath('/publications')}>Read our work <ArrowRight size={17} aria-hidden="true" /></a>
+      <section className="research-links section-shell">
+        <h2>Publications</h2>
+        <p>Browse selected papers from the group or view the complete record on Google Scholar.</p>
+        <div className="simple-links">
+          <a className="button button-primary" href={internalPath('/publications')}>Selected publications</a>
+          <a className="text-link" href="https://scholar.google.com/citations?hl=en&user=enuSO2YAAAAJ" target="_blank" rel="noreferrer">Google Scholar</a>
         </div>
       </section>
     </main>

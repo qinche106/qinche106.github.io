@@ -15,15 +15,18 @@ export default function NewsPage() {
     <main>
       <PageIntro
         eyebrow="News"
-        title={<>Progress, people,<br /><em>and perspectives.</em></>}
-        intro="New papers, research awards, invited talks, and moments from the life of the group."
+        title="News"
+        intro="Recent papers, talks, awards, and activities from the group."
       />
-      <section className="news-page section-shell">
-        {newsItems.map((item, index) => (
-          <article className={`news-feature ${index === 0 ? 'news-feature-lead' : ''}`} key={item.title}>
-            <div className="news-date"><time>{item.date}</time><span>{String(index + 1).padStart(2, '0')}</span></div>
-            <div className="news-copy"><h2>{item.title}</h2><p>{item.text}</p></div>
-            {item.image ? <img src={internalPath(item.image)} alt={item.imageAlt ?? ''} /> : <div className="news-motif" aria-hidden="true"><span>{item.year}</span></div>}
+      <section className="news-list section-shell">
+        {newsItems.map((item) => (
+          <article key={item.title}>
+            <time>{item.date}</time>
+            <div>
+              <h2>{item.title}</h2>
+              <p>{item.text}</p>
+              {item.image && <img src={internalPath(item.image)} alt={item.imageAlt ?? ''} loading="lazy" />}
+            </div>
           </article>
         ))}
       </section>

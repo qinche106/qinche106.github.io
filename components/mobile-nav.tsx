@@ -2,10 +2,10 @@ import { Menu, X } from 'lucide-react';
 import { internalPath } from '@/lib/paths';
 
 const links = [
-  ['Research', '/research'],
   ['People', '/people'],
-  ['Publications', '/publications'],
   ['News', '/news'],
+  ['Research', '/research'],
+  ['Gallery', '/gallery'],
   ['Join us', '/join-us'],
 ];
 
@@ -20,9 +20,8 @@ export function MobileNav() {
       <div className="mobile-sheet">
         <p>Efficient Intelligence Group</p>
         <nav className="mobile-sheet-nav" aria-label="Mobile navigation">
-          {links.map(([label, href], index) => (
+          {links.map(([label, href]) => (
             <a href={internalPath(href)} key={href}>
-              <span>{String(index + 1).padStart(2, '0')}</span>
               {label}
             </a>
           ))}

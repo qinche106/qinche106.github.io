@@ -1,7 +1,7 @@
 export const site = {
   name: 'Efficient Intelligence Group',
-  shortName: 'EIG',
-  institution: 'Leiden University · LIACS',
+  shortName: 'EIN',
+  institution: 'Leiden University',
   email: 'q.chen@liacs.leidenuniv.nl',
   address: ['Gorlaeus Building', 'Einsteinweg 55', '2333 CC Leiden, the Netherlands'],
 };
@@ -55,6 +55,8 @@ export const phdStudents = [
     since: 'August 2024',
     focus: 'Physiological signal processing, AI for healthcare, sensor fusion, neuromorphic computing',
     education: 'MSc, University of Science and Technology of China · BEng, Ocean University of China',
+    image: '/images/guorui.jpg',
+    imagePosition: 'center 35%',
     url: 'https://www.universiteitleiden.nl/en/staffmembers/guorui-lu',
   },
   {
@@ -62,6 +64,8 @@ export const phdStudents = [
     since: 'November 2024',
     focus: 'Embedded LLM algorithms and hardware, low-bit models, vision–language models',
     education: 'MEng, Technical University of Munich · BEng, University of New South Wales',
+    image: '/images/jiawen.jpg',
+    imagePosition: '22% 55%',
     note: 'Co-supervised with Dr. Zhaochun Ren',
     url: 'https://www.universiteitleiden.nl/en/staffmembers/jiawen-qi',
   },
@@ -70,6 +74,8 @@ export const phdStudents = [
     since: 'December 2025',
     focus: 'Event-based vision for robotics and AI hardware design',
     education: 'MSc, Leiden University · BEng, Zhejiang University',
+    image: '/images/zhen.jpg',
+    imagePosition: 'center 58%',
     note: 'Co-supervised with Dr. Joost Broekens',
     url: 'https://www.universiteitleiden.nl/en/staffmembers/zhen-xu',
   },
@@ -78,6 +84,8 @@ export const phdStudents = [
     since: 'February 2026',
     focus: 'Audio LLM algorithm–hardware design and FPGA systems',
     education: 'MEng & BEng, University College London',
+    image: '/images/jiayu.jpeg',
+    imagePosition: 'center 38%',
     url: 'https://www.universiteitleiden.nl/en/staffmembers/jiayu-liu',
   },
 ];
@@ -90,13 +98,46 @@ export const alumni = [
   ['Yihui Peng', 'BSc · MSc at UCL', '2026'],
   ['Cindy Wang', 'BSc · MSc in Computer Science, Leiden University', '2026'],
   ['Pu Li', 'MSc · Engineer at HKUST', '2026'],
-  ['Suju Li', 'MSc · PhD candidate at LIACS', '2026'],
+  ['Suju Li', 'MSc · PhD candidate at Leiden University', '2026'],
   ['Shan Jiang', 'MSc', '2026'],
   ['Shaohua Guan', 'MSc · Robotics AI at Phridom', '2026'],
   ['Rayan Salmi', 'BSc · MSc in Computer Science, TU Delft', '2025'],
   ['Xuening Xin', 'MSc · Lenovo', '2025'],
   ['Suzhen Deng', 'MSc · Guangdong Energy Group', '2025'],
-  ['Zhen Xu', 'MSc · Continued as PhD candidate in EIG', '2025'],
+  ['Zhen Xu', 'MSc · Continued as PhD candidate in EIN', '2025'],
+];
+
+export const galleryItems = [
+  {
+    image: '/images/hero-seminar.jpg',
+    alt: 'Researchers gathered for a guest seminar on event-based vision',
+    caption: 'Guest seminar on event-based vision · Leiden, 2026',
+  },
+  {
+    image: '/images/wicas-symposium.png',
+    alt: 'Participants at the IEEE WiCAS-YP symposium in Leiden',
+    caption: 'IEEE WiCAS-YP Symposium · Leiden, 2025',
+  },
+  {
+    image: '/images/neat-talk.jpg',
+    alt: 'Qinyu Chen presenting research at the NEAT Symposium',
+    caption: 'NEAT Symposium · Utrecht, 2026',
+  },
+  {
+    image: '/images/evhand-award.png',
+    alt: 'Best poster recognition for the EvHand-FPV project',
+    caption: 'EdgeAI4Robots Workshop · IROS 2025',
+  },
+  {
+    image: '/images/zhen-poster.jpg',
+    alt: 'Research poster presentation on event-based hand tracking',
+    caption: 'Event-based perception research · 2025',
+  },
+  {
+    image: '/images/deltakws-chip.png',
+    alt: 'DeltaKWS chip and measurement platform',
+    caption: 'From architecture to measured silicon',
+  },
 ];
 
 export type Publication = {

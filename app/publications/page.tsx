@@ -16,8 +16,8 @@ export default function PublicationsPage() {
     <main>
       <PageIntro
         eyebrow="Publications"
-        title={<>Ideas, evaluated<br /><em>in the real world.</em></>}
-        intro="Selected recent work across efficient AI, neuromorphic computing, physiological signals, and intelligent perception."
+        title="Selected publications"
+        intro="Recent work across efficient AI, neuromorphic computing, physiological signals, and intelligent perception."
       />
       <section className="publications-section section-shell">
         <PublicationList publications={publications} />

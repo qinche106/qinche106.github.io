@@ -1,6 +1,6 @@
 import type { MetadataRoute } from 'next';
 
-const routes = ['', '/research', '/people', '/people/qinyu-chen', '/publications', '/news', '/join-us'];
+const routes = ['', '/people', '/news', '/research', '/gallery', '/join-us', '/people/qinyu-chen', '/publications'];
 
 export default function sitemap(): MetadataRoute.Sitemap {
   return routes.map((route) => ({
