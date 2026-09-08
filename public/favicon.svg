@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+  <path fill="#001158" d="M4 4h56v44L48 60H4z"/>
+  <path fill="#f46e32" d="M48 48h12L48 60z"/>
+  <text x="32" y="38" text-anchor="middle" fill="#fff" font-family="Arial, sans-serif" font-size="20" font-weight="700">EIG</text>
+</svg>
