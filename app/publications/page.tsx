@@ -4,6 +4,8 @@ import { PageIntro } from '@/components/page-intro';
 import { PublicationList } from '@/components/publication-list';
 import { publications } from '@/lib/site-data';
 
+export const dynamic = 'force-static';
+
 export const metadata: Metadata = {
   title: 'Publications · Efficient Intelligence Group',
   description: 'Selected publications from the Efficient Intelligence Group at Leiden University.',

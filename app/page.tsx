@@ -1,5 +1,8 @@
 import { ArrowRight, ArrowUpRight } from 'lucide-react';
+import { internalPath } from '@/lib/paths';
 import { newsItems, publications, researchAreas } from '@/lib/site-data';
+
+export const dynamic = 'force-static';
 
 export default function Home() {
   const featuredNews = newsItems.filter((item) => [
@@ -23,10 +26,10 @@ export default function Home() {
             and robotics.
           </p>
           <div className="hero-actions">
-            <a className="button button-primary" href="/research">
+            <a className="button button-primary" href={internalPath('/research')}>
               Explore our research <ArrowRight size={17} aria-hidden="true" />
             </a>
-            <a className="text-link" href="/people">
+            <a className="text-link" href={internalPath('/people')}>
               Meet the group <ArrowUpRight size={16} aria-hidden="true" />
             </a>
           </div>
@@ -38,7 +41,7 @@ export default function Home() {
 
         <figure className="hero-visual">
           <img
-            src="/images/hero-seminar.jpg"
+            src={internalPath('/images/hero-seminar.jpg')}
             alt="A research seminar with colleagues gathered around a presentation on event cameras"
           />
           <figcaption>
@@ -68,7 +71,7 @@ export default function Home() {
                 <span className="research-number">{area.number}</span>
                 <h3>{area.title}</h3>
                 <p>{area.summary}</p>
-                <a href={`/research#${area.slug}`} aria-label={`Read more about ${area.title}`}>
+                <a href={internalPath(`/research#${area.slug}`)} aria-label={`Read more about ${area.title}`}>
                   Read focus <ArrowUpRight size={16} aria-hidden="true" />
                 </a>
               </article>
@@ -83,7 +86,7 @@ export default function Home() {
             <p className="eyebrow"><span /> Selected work</p>
             <h2 id="selected-work-title">Recent research,<br /><em>across the stack.</em></h2>
           </div>
-          <a className="text-link" href="/publications">All publications <ArrowRight size={16} aria-hidden="true" /></a>
+          <a className="text-link" href={internalPath('/publications')}>All publications <ArrowRight size={16} aria-hidden="true" /></a>
         </div>
         <div className="home-publication-list">
           {publications.slice(0, 4).map((publication, index) => (
@@ -120,12 +123,12 @@ export default function Home() {
             <p className="eyebrow"><span /> Latest</p>
             <h2 id="latest-title">News from <em>the group.</em></h2>
           </div>
-          <a className="text-link" href="/news">View all news <ArrowRight size={16} aria-hidden="true" /></a>
+          <a className="text-link" href={internalPath('/news')}>View all news <ArrowRight size={16} aria-hidden="true" /></a>
         </div>
         <div className="home-news-grid">
           {featuredNews.map((item) => (
             <article className="news-card" key={item.title}>
-              {item.image ? <img src={item.image} alt={item.imageAlt ?? ''} /> : <div className="news-card-placeholder" aria-hidden="true"><span>EIG</span></div>}
+              {item.image ? <img src={internalPath(item.image)} alt={item.imageAlt ?? ''} /> : <div className="news-card-placeholder" aria-hidden="true"><span>EIG</span></div>}
               <div className="news-card-body">
                 <time>{item.date}</time>
                 <h3>{item.title}</h3>
@@ -141,7 +144,7 @@ export default function Home() {
         <div>
           <h2>Curious minds,<br /><em>welcome.</em></h2>
           <p>We offer research projects for MSc and BSc students across embedded AI, bio-signals, and event-based perception.</p>
-          <a className="button button-light" href="/join-us">Explore projects <ArrowRight size={17} aria-hidden="true" /></a>
+          <a className="button button-light" href={internalPath('/join-us')}>Explore projects <ArrowRight size={17} aria-hidden="true" /></a>
         </div>
       </section>
     </main>

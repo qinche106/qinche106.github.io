@@ -1,4 +1,5 @@
 import { ArrowUpRight } from 'lucide-react';
+import { internalPath } from '@/lib/paths';
 import { site } from '@/lib/site-data';
 
 export function SiteFooter() {
@@ -15,10 +16,10 @@ export function SiteFooter() {
 
         <div className="footer-column">
           <span>Explore</span>
-          <a href="/research">Research</a>
-          <a href="/people">People</a>
-          <a href="/publications">Publications</a>
-          <a href="/news">News</a>
+          <a href={internalPath('/research')}>Research</a>
+          <a href={internalPath('/people')}>People</a>
+          <a href={internalPath('/publications')}>Publications</a>
+          <a href={internalPath('/news')}>News</a>
         </div>
 
         <div className="footer-column">

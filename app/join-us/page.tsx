@@ -3,6 +3,8 @@ import { ArrowRight, Mail } from 'lucide-react';
 import { PageIntro } from '@/components/page-intro';
 import { closedPhdCalls, ongoingProjects, site } from '@/lib/site-data';
 
+export const dynamic = 'force-static';
+
 export const metadata: Metadata = {
   title: 'Join us · Efficient Intelligence Group',
   description: 'Student projects and opportunities with the Efficient Intelligence Group at Leiden University.',

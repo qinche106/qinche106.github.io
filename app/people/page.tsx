@@ -1,7 +1,10 @@
 import type { Metadata } from 'next';
 import { ArrowUpRight } from 'lucide-react';
 import { PageIntro } from '@/components/page-intro';
+import { internalPath } from '@/lib/paths';
 import { alumni, bscStudents, mscStudents, phdStudents } from '@/lib/site-data';
+
+export const dynamic = 'force-static';
 
 export const metadata: Metadata = {
   title: 'People · Efficient Intelligence Group',
@@ -20,13 +23,13 @@ export default function PeoplePage() {
       <section className="people-section section-shell">
         <div className="section-label"><span>01</span><h2>Principal investigator</h2></div>
         <article className="pi-card">
-          <img src="/images/qinyu-chen.jpg" alt="Portrait of Qinyu Chen" />
+          <img src={internalPath('/images/qinyu-chen.jpg')} alt="Portrait of Qinyu Chen" />
           <div>
             <p className="person-role">Assistant Professor · LIACS</p>
             <h3>Qinyu Chen</h3>
             <p>Qinyu leads the Efficient Intelligence Group. Her research combines neuroscience, computer science, and microelectronics to develop compact, energy-efficient intelligent systems for healthcare, extended reality, robotics, and generative AI.</p>
             <div className="person-links">
-              <a href="/people/qinyu-chen">Profile <ArrowUpRight size={15} aria-hidden="true" /></a>
+              <a href={internalPath('/people/qinyu-chen')}>Profile <ArrowUpRight size={15} aria-hidden="true" /></a>
               <a href="https://www.universiteitleiden.nl/en/staffmembers/qinyu-chen" target="_blank" rel="noreferrer">Leiden profile <ArrowUpRight size={15} aria-hidden="true" /></a>
             </div>
           </div>

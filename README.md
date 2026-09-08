@@ -21,6 +21,8 @@ Open `http://localhost:3000`.
 pnpm build
 ```
 
+Pushes to `main` also run `.github/workflows/deploy-pages.yml`, which builds a static export for GitHub Pages. The custom domain is intentionally left unconfigured until the content and DNS migration are approved.
+
 Source repository: [qinche106/efficient-intelligence-group](https://github.com/qinche106/efficient-intelligence-group).
 
 The current production preview is deployed separately. Configure the final hosting target and custom domain only after the content review is complete.

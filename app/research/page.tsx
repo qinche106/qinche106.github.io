@@ -1,7 +1,10 @@
 import type { Metadata } from 'next';
 import { ArrowDown, ArrowRight } from 'lucide-react';
 import { PageIntro } from '@/components/page-intro';
+import { internalPath } from '@/lib/paths';
 import { researchAreas } from '@/lib/site-data';
+
+export const dynamic = 'force-static';
 
 export const metadata: Metadata = {
   title: 'Research · Efficient Intelligence Group',
@@ -43,7 +46,7 @@ export default function ResearchPage() {
             </div>
             {index === 0 && (
               <figure className="research-detail-image">
-                <img src="/images/deltakws-chip.png" alt="Keyword spotting chip and measurement platform" />
+                <img src={internalPath('/images/deltakws-chip.png')} alt="Keyword spotting chip and measurement platform" />
                 <figcaption>From architecture to measured silicon.</figcaption>
               </figure>
             )}
@@ -55,7 +58,7 @@ export default function ResearchPage() {
         <p className="eyebrow eyebrow-light"><span /> Our approach</p>
         <div>
           <h2>Algorithms <span>→</span> architectures <span>→</span> systems <span>→</span> impact.</h2>
-          <a className="button button-light" href="/publications">Read our work <ArrowRight size={17} aria-hidden="true" /></a>
+          <a className="button button-light" href={internalPath('/publications')}>Read our work <ArrowRight size={17} aria-hidden="true" /></a>
         </div>
       </section>
     </main>

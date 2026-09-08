@@ -1,5 +1,8 @@
 import type { Metadata } from 'next';
 import { ArrowLeft, ArrowUpRight, Mail } from 'lucide-react';
+import { internalPath } from '@/lib/paths';
+
+export const dynamic = 'force-static';
 
 export const metadata: Metadata = {
   title: 'Qinyu Chen · Efficient Intelligence Group',
@@ -47,9 +50,9 @@ const service = [
 export default function QinyuChenPage() {
   return (
     <main className="pi-profile section-shell">
-      <a className="back-link" href="/people"><ArrowLeft size={16} aria-hidden="true" /> Back to people</a>
+      <a className="back-link" href={internalPath('/people')}><ArrowLeft size={16} aria-hidden="true" /> Back to people</a>
       <section className="pi-profile-hero">
-        <img src="/images/qinyu-chen.jpg" alt="Portrait of Qinyu Chen" />
+        <img src={internalPath('/images/qinyu-chen.jpg')} alt="Portrait of Qinyu Chen" />
         <div>
           <p className="eyebrow"><span /> Principal investigator</p>
           <h1>Qinyu Chen</h1>

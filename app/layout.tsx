@@ -4,6 +4,8 @@ import { SiteFooter } from '@/components/site-footer';
 import { SiteHeader } from '@/components/site-header';
 import './globals.css';
 
+export const dynamic = 'force-static';
+
 const geistSans = Geist({
   variable: '--font-geist-sans',
   subsets: ['latin'],

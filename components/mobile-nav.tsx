@@ -1,4 +1,5 @@
 import { Menu, X } from 'lucide-react';
+import { internalPath } from '@/lib/paths';
 
 const links = [
   ['Research', '/research'],
@@ -20,7 +21,7 @@ export function MobileNav() {
         <p>Efficient Intelligence Group</p>
         <nav className="mobile-sheet-nav" aria-label="Mobile navigation">
           {links.map(([label, href], index) => (
-            <a href={href} key={href}>
+            <a href={internalPath(href)} key={href}>
               <span>{String(index + 1).padStart(2, '0')}</span>
               {label}
             </a>
