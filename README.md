@@ -21,7 +21,9 @@ Open `http://localhost:3000`.
 pnpm build
 ```
 
-The project is intended to be kept in GitHub. Connect this folder to the group repository before configuring the production deployment and custom domain.
+Source repository: [qinche106/efficient-intelligence-group](https://github.com/qinche106/efficient-intelligence-group).
+
+The current production preview is deployed separately. Configure the final hosting target and custom domain only after the content review is complete.
 
 ## Content provenance
 
