@@ -1,4 +1,4 @@
-import { GraduationCap, Mail } from 'lucide-react';
+import { GraduationCap, Landmark, Mail } from 'lucide-react';
 
 function LinkedInIcon({ size = 19 }: { size?: number }) {
   return (
@@ -13,6 +13,7 @@ const links = [
   { label: 'Email', href: 'mailto:q.chen@liacs.leidenuniv.nl', icon: Mail },
   { label: 'Google Scholar', href: 'https://scholar.google.com/citations?hl=en&user=enuSO2YAAAAJ', icon: GraduationCap },
   { label: 'LinkedIn', href: 'https://www.linkedin.com/in/qinyu-chen-852b18159/', icon: LinkedInIcon },
+  { label: 'Leiden profile', href: 'https://www.universiteitleiden.nl/en/staffmembers/qinyu-chen', icon: Landmark },
 ];
 
 export function ProfileSocialLinks() {

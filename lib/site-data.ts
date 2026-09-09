@@ -28,8 +28,8 @@ export const researchAreas = [
     body: 'We draw inspiration from neural dynamics and event-based sensing to develop energy-efficient intelligent systems. The group works across event-based signal processing, spiking algorithms, digital architectures, processor design, and emerging hardware technologies.',
     methods: ['Spiking neural networks', 'Temporal sparsity', 'Event-based sensing and processing', 'Custom circuits'],
     applications: 'Always-on sensing, extended reality, robotics, and responsive edge intelligence',
-    image: '/images/deltakws-chip.png',
-    imageAlt: 'DeltaKWS keyword spotting chip and measurement platform',
+    image: '/images/neuromorphic-sensing-topic.jpg',
+    imageAlt: 'Illustration of an event camera connected to a spiking neural network',
   },
   {
     number: '03',

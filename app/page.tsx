@@ -23,9 +23,8 @@ export default function Home() {
           <h2 id="group-title">Efficient Intelligence Group</h2>
           <p>
             The Efficient Intelligence Group develops energy-efficient intelligent systems, from
-            algorithms and circuits to systems, in the context of biosignal, audio, image, and large
-            language model applications. The lab is headed by Qinyu Chen and is affiliated with the
-            Leiden Institute of Advanced Computer Science (LIACS) at Leiden University.
+            algorithms and circuits to systems. The lab is headed by Qinyu Chen and is affiliated
+            with the Leiden Institute of Advanced Computer Science (LIACS) at Leiden University.
           </p>
         </div>
         <NewsImageCarousel items={carouselItems} />

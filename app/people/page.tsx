@@ -16,7 +16,7 @@ export default function PeoplePage() {
       <PageIntro
         eyebrow="Team"
         title="Team"
-        intro="We are a collaborative group working across artificial intelligence, embedded systems, microelectronics, and neuroscience."
+        intro="We are a collaborative group working across artificial intelligence, embedded systems, and microelectronics."
       />
 
       <section className="people-section section-shell">
@@ -27,10 +27,6 @@ export default function PeoplePage() {
             <h3><a href={internalPath('/people/qinyu-chen')}>Qinyu Chen</a></h3>
             <p className="person-role">Assistant Professor · Leiden University</p>
             <p>Qinyu leads the Efficient Intelligence Group. Her research connects algorithms and hardware for compact, energy-efficient intelligent systems.</p>
-            <div className="person-links">
-              <a href="https://scholar.google.com/citations?hl=en&user=enuSO2YAAAAJ" target="_blank" rel="noreferrer">Google Scholar</a>
-              <a href="https://www.universiteitleiden.nl/en/staffmembers/qinyu-chen" target="_blank" rel="noreferrer">Leiden profile</a>
-            </div>
           </div>
         </article>
       </section>
