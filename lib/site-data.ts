@@ -105,6 +105,11 @@ export const alumni = [
 
 export const galleryItems = [
   {
+    image: '/images/gallery-12.jpg',
+    alt: 'Leiden skyline under sunset clouds',
+    caption: 'Leiden, Aug 2026',
+  },
+  {
     image: '/images/gallery-01.jpg',
     alt: 'Landscape in Iceland',
     caption: 'Iceland, 2024',
@@ -249,6 +254,8 @@ export const newsItems: NewsItem[] = [
     year: 2026,
     title: 'Invited talk on low-latency LLMs at the edge',
     text: 'Qinyu gave an invited talk titled “Low-latency LLMs at the Edge” at the IEEE CIS “Foundation Models Meet Robotics” summer school in Paderborn, Germany.',
+    image: '/images/news-robot-award-2026.jpg',
+    imageAlt: 'Blue 3D-printed robot sculpture presented at the summer school',
   },
   {
     date: '28 June 2026',
