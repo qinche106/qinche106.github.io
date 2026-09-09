@@ -24,7 +24,7 @@ export default function Home() {
           <p>
             The Efficient Intelligence Group develops energy-efficient intelligent systems, from
             algorithms and circuits to systems. The lab is headed by Qinyu Chen and is affiliated
-            with the Leiden Institute of Advanced Computer Science (LIACS) at Leiden University.
+            with the Leiden Institute of Advanced Computer Science (<a className="institution-link" href="https://liacs.leidenuniv.nl/" target="_blank" rel="noreferrer">LIACS</a>) at Leiden University.
           </p>
         </div>
         <NewsImageCarousel items={carouselItems} />
@@ -35,12 +35,12 @@ export default function Home() {
         <p>
           Qinyu Chen has been an Assistant Professor at the Leiden Institute of Advanced Computer Science
           (LIACS), Leiden University, the Netherlands, since 2024. She received her PhD in Electronic Science
-          and Technology from Nanjing University in 2021, supervised by Prof. Li Li, and her BEng in
-          Communication Engineering from Shandong University in 2016, supervised by Prof. Haixia Zhang.
+          and Technology from <a className="institution-link" href="https://www.nju.edu.cn/en/" target="_blank" rel="noreferrer">Nanjing University</a> in 2021, supervised by Prof. Li Li, and her BEng in
+          Communication Engineering from <a className="institution-link" href="https://en.sdu.edu.cn/" target="_blank" rel="noreferrer">Shandong University</a> in 2016, supervised by Prof. Haixia Zhang.
         </p>
         <p>
           From 2019 to 2020, she was a visiting PhD student, and from 2022 to 2024, a postdoctoral researcher
-          at the Sensors Group, Institute of Neuroinformatics, University of Zurich and ETH Zurich, working
+          at the <a className="institution-link" href="https://sensors.ini.ch/" target="_blank" rel="noreferrer">Sensors Group</a>, <a className="institution-link" href="https://www.ini.uzh.ch/en/" target="_blank" rel="noreferrer">Institute of Neuroinformatics</a>, University of Zurich and ETH Zurich, working
           with Prof. Shih-Chii Liu and Prof. Tobi Delbruck.
         </p>
         <p>

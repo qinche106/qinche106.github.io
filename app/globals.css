@@ -121,7 +121,7 @@ a:focus-visible, button:focus-visible, summary:focus-visible { outline: 3px soli
 .news-carousel-content { margin-left: 0 !important; }
 .news-carousel-item { padding-left: 0 !important; }
 .news-carousel-item figure { margin: 0; }
-.news-carousel-item img { width: 100%; aspect-ratio: 16 / 9; object-fit: cover; background: #eef1f4; }
+.news-carousel-item img { width: 100%; aspect-ratio: 16 / 9; border: 1px solid var(--border); object-fit: contain; background: #f2f4f6; }
 .news-carousel-item figcaption { display: grid; gap: 2px; min-height: 60px; padding-top: 10px; }
 .news-carousel-item figcaption time { color: var(--text-muted); font-size: 12px; }
 .news-carousel-item figcaption span { font-size: 14px; font-weight: 600; line-height: 1.35; }
@@ -154,6 +154,8 @@ a:focus-visible, button:focus-visible, summary:focus-visible { outline: 3px soli
 .page-label, .research-label { margin: 0 0 8px; color: var(--text-muted); font-size: 12px; font-weight: 650; letter-spacing: 0.08em; text-transform: uppercase; }
 .page-intro h1, .pi-profile-hero h1, .not-found h1 { margin: 0; color: #111318; font-size: 36px; font-weight: 700; letter-spacing: -0.025em; line-height: 1.15; }
 .page-intro > p:last-child { max-width: var(--reading-width); margin: 13px 0 0; color: var(--text-muted); }
+.institution-link { color: var(--link-blue); text-decoration: underline; text-decoration-thickness: 1px; text-underline-offset: 3px; }
+.institution-link:hover { color: var(--logo-blue); }
 
 /* Team */
 .people-section { padding-block: 42px; }

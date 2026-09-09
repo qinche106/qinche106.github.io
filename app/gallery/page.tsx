@@ -14,7 +14,6 @@ export default function GalleryPage() {
   return (
     <main>
       <PageIntro
-        eyebrow="Gallery"
         title="ABSENT-MINDED MOMENTS"
       />
       <section className="gallery-grid section-shell">

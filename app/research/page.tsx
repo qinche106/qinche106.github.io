@@ -14,7 +14,6 @@ export default function ResearchPage() {
   return (
     <main>
       <PageIntro
-        eyebrow="Research"
         title="Research"
         intro="We study efficient intelligence across algorithms, architectures, circuits, and embedded systems."
       />

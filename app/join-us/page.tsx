@@ -13,7 +13,6 @@ export default function JoinUsPage() {
   return (
     <main>
       <PageIntro
-        eyebrow="Join us"
         title="Join us"
         intro="We welcome motivated students and researchers interested in efficient intelligent systems."
       />

@@ -14,7 +14,6 @@ export default function PeoplePage() {
   return (
     <main>
       <PageIntro
-        eyebrow="Team"
         title="Team"
         intro="We are a collaborative group working across artificial intelligence, embedded systems, and microelectronics."
       />

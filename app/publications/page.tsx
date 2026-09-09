@@ -15,7 +15,6 @@ export default function PublicationsPage() {
   return (
     <main>
       <PageIntro
-        eyebrow="Publications"
         title="Selected publications"
         intro="Recent work across efficient AI, neuromorphic computing, physiological signals, and intelligent perception."
       />

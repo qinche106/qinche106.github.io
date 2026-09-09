@@ -14,7 +14,6 @@ export default function NewsPage() {
   return (
     <main>
       <PageIntro
-        eyebrow="News"
         title="News"
         intro="Recent papers, talks, awards, and activities from the group."
       />
