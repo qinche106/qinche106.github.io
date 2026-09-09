@@ -24,8 +24,23 @@ export default function NewsPage() {
             <time>{item.date}</time>
             <div>
               <h2>{item.title}</h2>
-              <p>{item.text}</p>
-              {item.image && <img src={internalPath(item.image)} alt={item.imageAlt ?? ''} loading="lazy" />}
+              {item.text && <p>{item.text}</p>}
+              {item.paragraphs?.map((paragraph) => <p key={paragraph}>{paragraph}</p>)}
+              {item.links && (
+                <div className="news-links">
+                  {item.links.map((link) => (
+                    <a href={link.href} key={link.href} target="_blank" rel="noreferrer">{link.label}</a>
+                  ))}
+                </div>
+              )}
+              {(item.image || item.additionalImages) && (
+                <div className="news-images">
+                  {item.image && <img src={internalPath(item.image)} alt={item.imageAlt ?? ''} loading="lazy" />}
+                  {item.additionalImages?.map((image) => (
+                    <img src={internalPath(image.image)} alt={image.alt} loading="lazy" key={image.image} />
+                  ))}
+                </div>
+              )}
             </div>
           </article>
         ))}

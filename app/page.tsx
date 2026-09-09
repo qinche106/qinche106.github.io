@@ -5,25 +5,7 @@ import { newsItems, researchAreas, site } from '@/lib/site-data';
 
 export const dynamic = 'force-static';
 
-const homepageTopics = [
-  {
-    ...researchAreas[0],
-    title: 'Low-power Edge LLM',
-    image: '/images/edge-llm-topic.jpg',
-    imageAlt: 'Illustration of a compact large language model running on an edge processor',
-  },
-  {
-    ...researchAreas[1],
-    image: '/images/deltakws-chip.png',
-    imageAlt: 'DeltaKWS keyword spotting chip and measurement platform',
-  },
-  {
-    ...researchAreas[2],
-    title: 'Efficient Biosignal Processing Systems',
-    image: '/images/biosignal-topic.jpg',
-    imageAlt: 'Illustration of biosignals flowing from wearable sensors to an embedded processor',
-  },
-];
+const homepageTopics = researchAreas;
 
 const carouselItems = newsItems.filter((item) => item.image);
 

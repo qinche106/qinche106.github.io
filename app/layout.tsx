@@ -18,7 +18,7 @@ export const metadata: Metadata = {
     template: '%s',
   },
   description:
-    'Research at the intersection of efficient AI, neuromorphic computing, bio-signal processing, embedded systems, and intelligent perception.',
+    'Research in low-power edge AI, neuromorphic sensing and computing, and efficient bio-signal processing systems.',
   openGraph: {
     title: 'Efficient Intelligence Group · Leiden University',
     description: 'Efficient systems for intelligent interaction—from algorithms and architectures to embedded hardware.',

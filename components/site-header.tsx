@@ -2,6 +2,7 @@ import { MobileNav } from '@/components/mobile-nav';
 import { internalPath } from '@/lib/paths';
 
 const links = [
+  ['Home', '/'],
   ['Team', '/people'],
   ['News', '/news'],
   ['Research', '/research'],

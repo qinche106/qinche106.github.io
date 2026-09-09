@@ -16,6 +16,7 @@ export function SiteFooter() {
 
         <div className="footer-column">
           <span>Explore</span>
+          <a href={internalPath('/')}>Home</a>
           <a href={internalPath('/people')}>Team</a>
           <a href={internalPath('/news')}>News</a>
           <a href={internalPath('/research')}>Research</a>

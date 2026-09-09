@@ -7,7 +7,7 @@ export const dynamic = 'force-static';
 
 export const metadata: Metadata = {
   title: 'Research · Efficient Intelligence Group',
-  description: 'Research in efficient AI, neuromorphic computing, bio-signal processing, and intelligent perception.',
+  description: 'Research in low-power edge AI, neuromorphic sensing and computing, and efficient bio-signal processing systems.',
 };
 
 export default function ResearchPage() {
@@ -20,7 +20,7 @@ export default function ResearchPage() {
       />
 
       <div className="research-detail-list section-shell">
-        {researchAreas.map((area, index) => (
+        {researchAreas.map((area) => (
           <section className="research-detail" id={area.slug} key={area.slug}>
             <div>
               <p className="research-label">{area.label}</p>
@@ -32,12 +32,10 @@ export default function ResearchPage() {
               </ul>
               <p className="application"><strong>Applications:</strong> {area.applications}</p>
             </div>
-            {index === 0 && (
-              <figure>
-                <img src={internalPath('/images/deltakws-chip.png')} alt="Keyword spotting chip and measurement platform" />
-                <figcaption>From architecture to measured silicon.</figcaption>
-              </figure>
-            )}
+            <figure>
+              <img src={internalPath(area.image)} alt={area.imageAlt} />
+              {area.slug === 'neuromorphic-computing' && <figcaption>From architecture to measured silicon.</figcaption>}
+            </figure>
           </section>
         ))}
       </div>

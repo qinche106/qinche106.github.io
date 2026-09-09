@@ -214,14 +214,17 @@ a:focus-visible, button:focus-visible, summary:focus-visible { outline: 3px soli
 .news-list time { color: var(--text-muted); font-size: 13px; }
 .news-list h2, .news-list h3 { margin: 0; color: var(--link-blue); font-size: 21px; font-weight: 700; line-height: 1.35; }
 .news-list p { margin: 7px 0 0; color: var(--text-muted); font-size: 15px; }
-.news-list img { width: min(620px, 100%); max-height: 360px; margin-top: 18px; object-fit: cover; }
+.news-links { display: flex; flex-wrap: wrap; gap: 8px 18px; margin-top: 12px; }
+.news-links a { color: var(--link-blue); font-size: 14px; font-weight: 600; text-decoration: underline; text-underline-offset: 3px; }
+.news-images { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; width: min(720px, 100%); margin-top: 18px; }
+.news-images img { width: 100%; max-height: 420px; object-fit: contain; background: var(--pale-blue); }
+.news-images img:only-child { grid-column: 1 / -1; width: min(620px, 100%); }
 .news-list-compact { padding: 0; }
 
 /* Gallery */
-.gallery-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 34px 26px; padding-block: 20px 70px; }
-.gallery-grid figure { margin: 0; }
-.gallery-grid img { width: 100%; aspect-ratio: 4 / 3; object-fit: cover; background: var(--pale-blue); }
-.gallery-grid figure:nth-child(4) img, .gallery-grid figure:nth-child(6) img { object-fit: contain; }
+.gallery-grid { columns: 2; column-gap: 26px; padding-block: 20px 70px; }
+.gallery-grid figure { break-inside: avoid; margin: 0 0 30px; }
+.gallery-grid img { width: 100%; height: auto; background: var(--pale-blue); }
 
 /* Join us */
 .opportunity-section { padding-block: 24px 58px; }
@@ -246,8 +249,8 @@ a:focus-visible, button:focus-visible, summary:focus-visible { outline: 3px soli
 .leiden-profile-link { display: inline-block; margin-top: 12px; color: var(--link-blue); font-size: 14px; }
 .leiden-profile-link:hover { text-decoration: underline; text-underline-offset: 3px; }
 .pi-profile-section { border-top: 1px solid var(--border); margin-top: 42px; padding-top: 28px; }
-.profile-keywords { display: flex; flex-wrap: wrap; gap: 8px 18px; }
-.profile-keywords span { color: var(--link-blue); font-size: 14px; }
+.profile-keywords { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 7px 24px; }
+.profile-keywords li { color: var(--link-blue); font-size: 14px; }
 .profile-two-column { display: grid; grid-template-columns: 1fr 1fr; gap: 54px; }
 .profile-timeline, .recognition-list { border-top: 1px solid var(--border); }
 .profile-timeline article { display: grid; grid-template-columns: 112px 1fr; gap: 18px; border-bottom: 1px solid var(--border); padding: 14px 0; }
@@ -258,7 +261,8 @@ a:focus-visible, button:focus-visible, summary:focus-visible { outline: 3px soli
 .cv-section { width: min(var(--reading-width), 100%); border-top: 1px solid var(--border); margin-top: 42px; padding-top: 28px; }
 .cv-section h2 { margin: 0 0 18px; font-size: 26px; }
 .cv-section h3 { margin: 25px 0 10px; font-size: 19px; }
-.cv-section ul { margin: 0; padding-left: 20px; }
+.cv-section ul { margin: 0; padding-left: 22px; list-style: disc; }
+.cv-section li::marker { color: var(--logo-blue); }
 .cv-section li + li { margin-top: 8px; }
 
 /* Publications */
@@ -317,7 +321,8 @@ a:focus-visible, button:focus-visible, summary:focus-visible { outline: 3px soli
   .home-profile { padding-bottom: 36px; }
   .home-overview, .home-biography, .home-topics, .find-us { padding-block: 40px; }
   .home-overview-copy h2, .home-biography h2, .home-section-heading h2, .find-us h2 { font-size: 27px; }
-  .topic-grid, .phd-grid, .student-lists, .gallery-grid, .profile-two-column { grid-template-columns: 1fr; }
+  .topic-grid, .phd-grid, .student-lists, .profile-two-column { grid-template-columns: 1fr; }
+  .gallery-grid { columns: 1; }
   .find-us { grid-template-columns: 1fr; gap: 12px; }
   .page-intro { padding-block: 34px 26px; }
   .page-intro h1, .pi-profile-hero h1, .not-found h1 { font-size: 32px; }
@@ -329,6 +334,8 @@ a:focus-visible, button:focus-visible, summary:focus-visible { outline: 3px soli
   .alumni-list > div { grid-template-columns: 0.7fr 1.3fr 40px; gap: 9px; font-size: 12px; }
   .research-detail, .research-detail:not(:has(figure)) { grid-template-columns: 1fr; gap: 24px; padding-block: 36px; }
   .news-list article { grid-template-columns: 1fr; gap: 6px; }
+  .news-images { grid-template-columns: 1fr; }
+  .news-images img:only-child { grid-column: auto; }
   .publication-row { grid-template-columns: 44px 1fr 32px; gap: 11px; }
   .scholar-callout { align-items: flex-start; flex-direction: column; }
   .footer-grid { flex-direction: column; gap: 20px; }

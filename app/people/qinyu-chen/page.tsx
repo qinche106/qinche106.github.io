@@ -87,9 +87,9 @@ export default function QinyuChenPage() {
 
       <section className="cv-section">
         <h2>Research interests</h2>
-        <div className="profile-keywords">
-          {['Circuit design', 'Brain-inspired AI', 'Bio-signal processing', 'Embedded large language models', 'Event-based vision', 'Edge intelligence'].map((item) => <span key={item}>{item}</span>)}
-        </div>
+        <ul className="profile-keywords">
+          {['Circuit design', 'Brain-inspired AI', 'Bio-signal processing', 'Embedded large language models', 'Event-based vision', 'Edge intelligence'].map((item) => <li key={item}>{item}</li>)}
+        </ul>
       </section>
 
       <section className="cv-section">

@@ -2,6 +2,7 @@ import { Menu, X } from 'lucide-react';
 import { internalPath } from '@/lib/paths';
 
 const links = [
+  ['Home', '/'],
   ['Team', '/people'],
   ['News', '/news'],
   ['Research', '/research'],
