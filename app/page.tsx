@@ -40,7 +40,7 @@ export default function Home() {
         </p>
         <p>
           From 2019 to 2020, she was a visiting PhD student, and from 2022 to 2024, a postdoctoral researcher
-          at the <a className="institution-link" href="https://sensors.ini.ch/" target="_blank" rel="noreferrer">Sensors Group</a>, <a className="institution-link" href="https://www.ini.uzh.ch/en/" target="_blank" rel="noreferrer">Institute of Neuroinformatics</a>, University of Zurich and ETH Zurich, working
+          at the <a className="institution-link" href="https://sensors.ini.ch/" target="_blank" rel="noreferrer">Sensors Group</a>, <a className="institution-link" href="https://www.ini.uzh.ch/en.html" target="_blank" rel="noreferrer">Institute of Neuroinformatics</a>, University of Zurich and ETH Zurich, working
           with Prof. Shih-Chii Liu and Prof. Tobi Delbruck.
         </p>
         <p>
