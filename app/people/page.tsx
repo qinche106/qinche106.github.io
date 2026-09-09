@@ -6,7 +6,7 @@ import { alumni, bscStudents, mscStudents, phdStudents } from '@/lib/site-data';
 export const dynamic = 'force-static';
 
 export const metadata: Metadata = {
-  title: 'People · Efficient Intelligence Group',
+  title: 'Team · Efficient Intelligence Group',
   description: 'Meet the researchers and students of the Efficient Intelligence Group at Leiden University.',
 };
 
@@ -14,8 +14,8 @@ export default function PeoplePage() {
   return (
     <main>
       <PageIntro
-        eyebrow="People"
-        title="People"
+        eyebrow="Team"
+        title="Team"
         intro="We are a collaborative group working across artificial intelligence, embedded systems, microelectronics, and neuroscience."
       />
 
@@ -24,11 +24,10 @@ export default function PeoplePage() {
         <article className="pi-card">
           <img src={internalPath('/images/qinyu-chen.jpg')} alt="Portrait of Qinyu Chen" />
           <div>
-            <h3>Qinyu Chen</h3>
+            <h3><a href={internalPath('/people/qinyu-chen')}>Qinyu Chen</a></h3>
             <p className="person-role">Assistant Professor · Leiden University</p>
             <p>Qinyu leads the Efficient Intelligence Group. Her research connects algorithms and hardware for compact, energy-efficient intelligent systems.</p>
             <div className="person-links">
-              <a href={internalPath('/people/qinyu-chen')}>Profile</a>
               <a href="https://scholar.google.com/citations?hl=en&user=enuSO2YAAAAJ" target="_blank" rel="noreferrer">Google Scholar</a>
               <a href="https://www.universiteitleiden.nl/en/staffmembers/qinyu-chen" target="_blank" rel="noreferrer">Leiden profile</a>
             </div>

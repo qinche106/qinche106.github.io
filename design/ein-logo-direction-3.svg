@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" role="img" aria-labelledby="title desc">
+  <title id="title">Efficient Intelligence Group logo</title>
+  <desc id="desc">An abstract signal transitions into a digital circuit inside an open circular frame.</desc>
+
+  <path
+    d="M238 50A206 206 0 0 0 238 462"
+    fill="none"
+    stroke="#001158"
+    stroke-linecap="round"
+    stroke-width="20"
+  />
+  <path
+    d="M274 50A206 206 0 0 1 274 462"
+    fill="none"
+    stroke="#2F8DD8"
+    stroke-linecap="round"
+    stroke-width="20"
+  />
+
+  <path
+    d="M92 256C132 336 174 176 230 256H256"
+    fill="none"
+    stroke="#001158"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+    stroke-width="20"
+  />
+  <path
+    d="M256 256H350V205H420V256"
+    fill="none"
+    stroke="#2F8DD8"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+    stroke-width="20"
+  />
+
+  <circle cx="92" cy="256" r="25" fill="#001158" />
+  <circle cx="256" cy="256" r="25" fill="#2F8DD8" />
+  <circle cx="420" cy="256" r="25" fill="#A7D4F2" stroke="#2F8DD8" stroke-width="6" />
+</svg>
