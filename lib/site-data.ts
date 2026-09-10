@@ -112,7 +112,7 @@ export const galleryItems = [
   {
     image: '/images/gallery-01.jpg',
     alt: 'Landscape in Iceland',
-    caption: 'Iceland, 2024',
+    caption: 'Iceland, 2024 (photographer: Longbiao)',
   },
   {
     image: '/images/gallery-02.jpg',
