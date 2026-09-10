@@ -127,7 +127,7 @@ export const galleryItems = [
   {
     image: '/images/gallery-04.jpg',
     alt: 'Travel landscape photograph',
-    caption: '',
+    caption: 'E10, Norway, 2023',
   },
   {
     image: '/images/gallery-05.jpg',
@@ -157,7 +157,7 @@ export const galleryItems = [
   {
     image: '/images/gallery-10.jpg',
     alt: 'Travel landscape photograph',
-    caption: '',
+    caption: 'Telluride, CO, US, 2023',
   },
   {
     image: '/images/gallery-11.jpg',
