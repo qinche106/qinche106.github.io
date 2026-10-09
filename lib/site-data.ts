@@ -250,6 +250,15 @@ export type NewsItem = {
 
 export const newsItems: NewsItem[] = [
   {
+    date: '3 October 2026',
+    year: 2026,
+    title: 'DeltaLLM accepted by IEEE TCAS-AI',
+    text: 'Congratulations to our PhD student Jiawen Qi, first author of “DeltaLLM: Delta-Key Sparse Attention for Edge LLMs,” on the paper’s acceptance for publication in the IEEE Transactions on Circuits and Systems for Artificial Intelligence!',
+    paragraphs: ['Authors: Jiawen Qi, Jiayu Liu, Chang Gao, Zhaochun Ren, and Qinyu Chen.'],
+    image: '/images/news-deltallm-2026.png',
+    imageAlt: 'DeltaLLM hardware architecture showing the vector processing unit, sparse key generator, sparse online softmax unit, and processing element',
+  },
+  {
     date: '28 July 2026',
     year: 2026,
     title: 'Invited talk on low-latency LLMs at the edge',
