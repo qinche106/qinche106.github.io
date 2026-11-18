@@ -250,6 +250,13 @@ export type NewsItem = {
 
 export const newsItems: NewsItem[] = [
   {
+    date: '18 November 2026',
+    year: 2026,
+    title: 'DTS accepted at DATE 2027',
+    text: 'Congratulations to our MSc student Emre Uğur and PhD student Jiawen Qi on the acceptance of “DTS: Delta-Based Tile Scoring for Efficient Long-Context Sparse Attention” at the Design, Automation and Test in Europe Conference (DATE 2027)!',
+    paragraphs: ['Authors: Emre Uğur, Jiawen Qi, and Qinyu Chen.'],
+  },
+  {
     date: '3 October 2026',
     year: 2026,
     title: 'DeltaLLM accepted by IEEE TCAS-AI',
@@ -257,6 +264,7 @@ export const newsItems: NewsItem[] = [
     paragraphs: ['Authors: Jiawen Qi, Jiayu Liu, Chang Gao, Zhaochun Ren, and Qinyu Chen.'],
     image: '/images/news-deltallm-2026.png',
     imageAlt: 'DeltaLLM hardware architecture showing the vector processing unit, sparse key generator, sparse online softmax unit, and processing element',
+    links: [{ label: 'DeltaLLM on IEEE Xplore', href: 'https://ieeexplore.ieee.org/document/11738900' }],
   },
   {
     date: '28 July 2026',
