@@ -14,7 +14,7 @@ export default function GalleryPage() {
   return (
     <main>
       <PageIntro
-        title="ABSENT-MINDED MOMENTS"
+        title="Absent-Minded Moments"
       />
       <section className="gallery-grid section-shell">
         {galleryItems.map((item) => (

@@ -1,6 +1,6 @@
 import type { Metadata } from 'next';
 import { PageIntro } from '@/components/page-intro';
-import { internalPath } from '@/lib/paths';
+import { NewsEntry } from '@/components/news-entry';
 import { newsItems } from '@/lib/site-data';
 
 export const dynamic = 'force-static';
@@ -13,36 +13,9 @@ export const metadata: Metadata = {
 export default function NewsPage() {
   return (
     <main>
-      <PageIntro
-        title="News"
-        intro="Recent papers, talks, awards, and activities from the group."
-      />
+      <PageIntro title="News" intro="Recent papers, talks, awards, and activities from the group." />
       <section className="news-list section-shell">
-        {newsItems.map((item) => (
-          <article key={item.title}>
-            <time>{item.date}</time>
-            <div>
-              <h2>{item.title}</h2>
-              {item.text && <p>{item.text}</p>}
-              {item.paragraphs?.map((paragraph) => <p key={paragraph}>{paragraph}</p>)}
-              {item.links && (
-                <div className="news-links">
-                  {item.links.map((link) => (
-                    <a href={link.href} key={link.href} target="_blank" rel="noreferrer">{link.label}</a>
-                  ))}
-                </div>
-              )}
-              {(item.image || item.additionalImages) && (
-                <div className="news-images">
-                  {item.image && <img src={internalPath(item.image)} alt={item.imageAlt ?? ''} loading="lazy" />}
-                  {item.additionalImages?.map((image) => (
-                    <img src={internalPath(image.image)} alt={image.alt} loading="lazy" key={image.image} />
-                  ))}
-                </div>
-              )}
-            </div>
-          </article>
-        ))}
+        {newsItems.map((item) => <NewsEntry item={item} showImages key={item.title} />)}
       </section>
     </main>
   );

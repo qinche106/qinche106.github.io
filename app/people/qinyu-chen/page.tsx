@@ -64,20 +64,27 @@ function CvList({ items }: { items: string[] }) {
 export default function QinyuChenPage() {
   return (
     <main className="pi-profile section-shell">
-      <a className="back-link" href={internalPath('/people')}>← Back to Team</a>
+      <a className="back-link" href={internalPath('/people')}>Back to Team</a>
 
       <section className="pi-profile-hero">
         <img src={internalPath('/images/qinyu-chen.jpg')} alt="Qinyu Chen" />
         <div>
           <h1>Qinyu Chen</h1>
           <p className="pi-title">Assistant Professor · Leiden University</p>
+          <p className="pi-group">Principal investigator, Efficient Intelligence Group</p>
           <ProfileSocialLinks />
           <a className="leiden-profile-link" href="https://www.universiteitleiden.nl/en/staffmembers/qinyu-chen" target="_blank" rel="noreferrer">Leiden profile</a>
         </div>
       </section>
 
-      <section className="cv-section">
-        <h2>Biography</h2>
+      <nav className="pi-page-nav simple-links" aria-label="Qinyu Chen profile sections">
+        <a className="text-link" href="#about">About</a>
+        <a className="text-link" href="#research-interests">Research interests</a>
+        <a className="text-link" href="#academic-cv">Academic CV</a>
+      </nav>
+
+      <section className="cv-section" id="about" aria-labelledby="profile-about-title">
+        <h2 id="profile-about-title">About</h2>
         <p>Qinyu Chen has been an Assistant Professor at the Leiden Institute of Advanced Computer Science (LIACS), Leiden University, the Netherlands, since 2024. She received her PhD in Electronic Science and Technology from <a className="institution-link" href="https://www.nju.edu.cn/en/" target="_blank" rel="noreferrer">Nanjing University</a> in 2021, supervised by Prof. Li Li, and her BEng in Communication Engineering from <a className="institution-link" href="https://en.sdu.edu.cn/" target="_blank" rel="noreferrer">Shandong University</a> in 2016, supervised by Prof. Haixia Zhang.</p>
         <p>From 2019 to 2020, she was a visiting PhD student, and from 2022 to 2024, a postdoctoral researcher at the <a className="institution-link" href="https://sensors.ini.ch/" target="_blank" rel="noreferrer">Sensors Group</a>, <a className="institution-link" href="https://www.ini.uzh.ch/en.html" target="_blank" rel="noreferrer">Institute of Neuroinformatics</a>, University of Zurich and ETH Zurich, working with Prof. Shih-Chii Liu and Prof. Tobi Delbruck.</p>
         <p>Her research integrates neuroscience, computer science, and electronics to develop compact, energy-efficient, neuro-inspired intelligent systems for applications in healthcare, extended reality, and robotics. She has published in journals and conferences including TCAS-I, TCAS-II, TVLSI, TBIOCAS, TCAD, TCASAI, ICRA, CVPR, ISCAS, BioCAS, and AICAS.</p>
@@ -85,15 +92,15 @@ export default function QinyuChenPage() {
         <p>She also actively contributes to the research community, serving as Chair-Elect of the IEEE CAS Neural Systems and Applications Technical Committee, Track Chair of ISCAS (2024–2026), an organizer of IEEE WiCAS-YP (2025) and FPL (2025, 2026), an Associate Editor for ICRA (2025) and IROS (2026), and a Guest Editor of IEEE JETCAS (2026).</p>
       </section>
 
-      <section className="cv-section">
-        <h2>Research interests</h2>
+      <section className="cv-section" id="research-interests" aria-labelledby="profile-interests-title">
+        <h2 id="profile-interests-title">Research interests</h2>
         <ul className="profile-keywords">
           {['Circuit design', 'Brain-inspired AI', 'Bio-signal processing', 'Embedded large language models', 'Event-based vision', 'Edge intelligence'].map((item) => <li key={item}>{item}</li>)}
         </ul>
       </section>
 
-      <section className="cv-section">
-        <h2>Academic CV</h2>
+      <section className="cv-section" id="academic-cv" aria-labelledby="profile-cv-title">
+        <h2 id="profile-cv-title">Academic CV</h2>
         <h3>Education</h3>
         <CvList items={degrees} />
         <h3>Working experience</h3>

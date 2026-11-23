@@ -37,7 +37,7 @@ export default function JoinUsPage() {
         <div className="section-shell">
           <h2>Visiting and exchange</h2>
           <p>Interested scholars and students are welcome to contact us about research visits, exchange projects, and collaboration.</p>
-          <a className="button button-light" href={`mailto:${site.email}`}>Contact the group</a>
+          <a className="text-link" href={`mailto:${site.email}`}>Contact the group</a>
         </div>
       </section>
     </main>
