@@ -245,7 +245,9 @@ export type NewsItem = {
   image?: string;
   imageAlt?: string;
   additionalImages?: Array<{ image: string; alt: string }>;
-  links?: Array<{ label: string; href: string }>;
+  // Paragraph 0 is `text`; subsequent indices refer to `paragraphs`.
+  // Links without an index follow the final paragraph.
+  links?: Array<{ label: string; href: string; paragraphIndex?: number }>;
 };
 
 export const newsItems: NewsItem[] = [
@@ -254,7 +256,7 @@ export const newsItems: NewsItem[] = [
     year: 2026,
     title: 'DTS: Delta-Based Tile Scoring for Efficient Long-Context Sparse Attention',
     text: 'Congratulations to our MSc student Emre Uğur and PhD student Jiawen Qi, co-first authors of DTS, on its acceptance at DATE 2027!',
-    links: [{ label: 'Paper', href: 'https://arxiv.org/abs/2611.25938' }],
+    links: [{ label: 'paper', href: 'https://arxiv.org/abs/2611.25938' }],
   },
   {
     date: '3 October 2026',
@@ -264,7 +266,7 @@ export const newsItems: NewsItem[] = [
     image: '/images/news-deltallm-2026.png',
     imageAlt: 'DeltaLLM hardware architecture showing the vector processing unit, sparse key generator, sparse online softmax unit, and processing element',
     links: [
-      { label: 'Paper', href: 'https://arxiv.org/abs/2507.19608' },
+      { label: 'paper', href: 'https://arxiv.org/abs/2507.19608' },
     ],
   },
   {
@@ -280,7 +282,11 @@ export const newsItems: NewsItem[] = [
     year: 2026,
     title: 'Two papers accepted at AICAS 2026',
     text: 'Congratulations to our MSc student Pu Li and his day supervisor, PhD student Jiawen Qi, on the acceptance of “When NPUs Are Not Always Faster: A Stage-Level Analysis of Mobile LLM Inference.”',
-    paragraphs: ['We are also pleased to share that “MonarchGRU: A Low-Footprint Recurrent Neural Network for Audio Keyword Spotting” has been accepted. This work is a collaboration with Aalto University, Yonsei University, and TU Delft.'],
+    paragraphs: ['We are also pleased to share that “MonarchGRU: A Low-Footprint Recurrent Neural Network for Audio Keyword Spotting System” has been accepted. This work is a collaboration with Aalto University, Yonsei University, and TU Delft.'],
+    links: [
+      { label: 'paper', href: 'https://arxiv.org/abs/2605.27435', paragraphIndex: 0 },
+      { label: 'paper', href: 'https://doi.org/10.1109/AICAS69579.2026.11761587', paragraphIndex: 1 },
+    ],
   },
   {
     date: '19 June 2026',
@@ -313,6 +319,7 @@ export const newsItems: NewsItem[] = [
     year: 2026,
     title: 'Paper acceptance at ISCAS 2026',
     text: 'Our work, “SHAP-AAD: DeepSHAP-Guided Channel Reduction for EEG Auditory Attention Detection,” has been accepted for ISCAS 2026, Shanghai. Congratulations to our former BSc student Rayan Salmi and PhD student Guorui Lu.',
+    links: [{ label: 'paper', href: 'https://arxiv.org/abs/2507.03814' }],
   },
   {
     date: '26 November 2025',
@@ -360,6 +367,7 @@ export const newsItems: NewsItem[] = [
     title: 'Guorui presented his work and Qinyu was elected IEEE CASS NSA TC Secretary at ISCAS 2025',
     text: 'At ISCAS 2025 in London, UK, PhD student Guorui gave an oral presentation on his work titled “SlimSeiz: Efficient Channel-Adaptive Seizure Prediction Using a Mamba-Enhanced Network.”',
     paragraphs: ['During the annual meeting of the IEEE Circuits and Systems Society Neural Systems and Applications Technical Committee (IEEE CASS NSA TC), Qinyu was honored to be elected secretary of the NSA TC.'],
+    links: [{ label: 'paper', href: 'https://arxiv.org/abs/2410.09998', paragraphIndex: 0 }],
   },
   {
     date: '20 May 2025',
@@ -397,6 +405,10 @@ export const newsItems: NewsItem[] = [
     title: 'Paper acceptance at ICRA 2025 and ISCAS 2025',
     text: 'Our work, “FACET: Fast and Accurate Event-Based Eye Tracking Using Ellipse Modeling for Extended Reality,” has been accepted for ICRA 2025 in Atlanta, US. This collaboration includes Junyuan Ding (Beihang University), Ziteng Wang (DVSense), Chang Gao (TU Delft), Min Liu (DVSense), and Qinyu Chen.',
     paragraphs: ['Congratulations to PhD student Guorui Lu: his paper “SlimSeiz: Efficient Channel-Adaptive Seizure Prediction Using a Mamba-Enhanced Network,” with TU Delft and Shanghai Renji Hospital, has been accepted for a lecture presentation at ISCAS 2025 in London, UK.'],
+    links: [
+      { label: 'paper', href: 'https://arxiv.org/abs/2409.15584', paragraphIndex: 0 },
+      { label: 'paper', href: 'https://arxiv.org/abs/2410.09998', paragraphIndex: 1 },
+    ],
   },
   {
     date: '9 January 2025',
@@ -418,7 +430,7 @@ export const newsItems: NewsItem[] = [
     text: 'Our work “DeltaKWS: A 65nm 36nJ/Decision Bio-inspired Temporal-Sparsity-Aware Digital Keyword Spotting IC with 0.6V Near-Threshold SRAM,” together with ETH Zurich, University of Zurich, TU Delft, and Aalto University, was accepted by IEEE Transactions on Circuits and Systems for Artificial Intelligence.',
     image: '/images/news-original-09.png',
     imageAlt: 'DeltaKWS keyword spotting chip and measurement platform',
-    links: [{ label: 'DeltaKWS paper', href: 'https://arxiv.org/pdf/2405.03905' }],
+    links: [{ label: 'paper', href: 'https://arxiv.org/abs/2405.03905' }],
   },
   {
     date: '19 November 2024',
@@ -451,7 +463,7 @@ export const newsItems: NewsItem[] = [
     image: '/images/news-original-12.png',
     imageAlt: 'FACET event-based eye-tracking results',
     additionalImages: [{ image: '/images/news-original-13.png', alt: 'FACET eye-tracking visualization' }],
-    links: [{ label: 'FACET on arXiv', href: 'https://arxiv.org/abs/2409.15584' }],
+    links: [{ label: 'paper', href: 'https://arxiv.org/abs/2409.15584' }],
   },
   {
     date: '10 August 2024',
@@ -460,6 +472,7 @@ export const newsItems: NewsItem[] = [
     text: 'Our work “Four-class EEG Classification for Seizure Prediction and Detection Using a Lightweight CNN-LSTM” was accepted by BioCAS 2024.',
     image: '/images/news-original-14.png',
     imageAlt: 'BioCAS 2024 paper acceptance announcement',
+    links: [{ label: 'paper', href: 'https://doi.org/10.1109/BioCAS61083.2024.10798214' }],
   },
   {
     date: '21 July 2024',
@@ -478,7 +491,7 @@ export const newsItems: NewsItem[] = [
     text: 'Our work “Epilepsy Seizure Detection and Prediction using an Approximate Spiking Convolutional Transformer” received the Best Paper Award — Honorable Mention from the IEEE CASS Neural Systems and Applications Technical Committee (NSATC) at ISCAS 2024 in Singapore.',
     image: '/images/news-original-15.jpg',
     imageAlt: 'Best Paper Award Honorable Mention at ISCAS 2024',
-    links: [{ label: 'Paper', href: 'https://arxiv.org/pdf/2402.09424' }],
+    links: [{ label: 'paper', href: 'https://arxiv.org/abs/2402.09424' }],
   },
   {
     date: '1 February 2024',

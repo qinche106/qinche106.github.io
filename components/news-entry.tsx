@@ -13,8 +13,10 @@ export function NewsEntry({ item, headingLevel = 'h2', showImages = false }: {
   showImages?: boolean;
 }) {
   const Heading = headingLevel;
-  const paper = item.links?.find((link) => link.label.startsWith('Paper'));
+  const papers = item.links?.filter((link) => /^paper$/i.test(link.label)) ?? [];
+  const paper = papers.length === 1 ? papers[0] : undefined;
   const paragraphs = item.paragraphs ?? [];
+  const linksForParagraph = (index: number) => item.links?.filter((link) => (link.paragraphIndex ?? paragraphs.length) === index);
 
   return (
     <article className="news-entry">
@@ -25,10 +27,10 @@ export function NewsEntry({ item, headingLevel = 'h2', showImages = false }: {
             {paper ? <a href={paper.href} target="_blank" rel="noreferrer">{item.title}</a> : item.title}{/[.!?]$/.test(item.title) ? '' : '.'}
           </Heading>{' '}
           <span>{item.text}</span>
-          {!paragraphs.length && <NewsLinks links={item.links} />}
+          <NewsLinks links={linksForParagraph(0)} />
         </div>
         {paragraphs.map((paragraph, index) => (
-          <p key={paragraph}>{paragraph}{index === paragraphs.length - 1 && <NewsLinks links={item.links} />}</p>
+          <p key={paragraph}>{paragraph}<NewsLinks links={linksForParagraph(index + 1)} /></p>
         ))}
         {showImages && (item.image || item.additionalImages) && (
           <div className="news-images">
